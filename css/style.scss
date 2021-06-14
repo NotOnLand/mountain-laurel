@@ -1,0 +1,224 @@
+$green: #89af51;
+$white: #fffde3;
+$pink: #eca7c0;
+$Archer: 'ArcherBold', Georgia, Times, "Times New Roman", serif;
+$Moderat: 'ModeratMedium', Helvetica, Arial, sans-serif;
+
+@font-face {
+    font-family: 'ArcherBold';
+    src: url('fonts/Archer-Bold.woff2') format('woff2'), url('fonts/Archer-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'ArcherBold';
+    src: url('fonts/Archer-Bold-Ital.woff2') format('woff2'), url('fonts/Archer-Bold-Ital.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Medium.woff2') format('woff2'), url('fonts/Moderat-Medium.woff') format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Bold.woff2') format('woff2'), url('fonts/Moderat-Bold.woff') format('woff');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Medium-Ital.woff2') format('woff2'), url('fonts/Moderat-Medium-Ital.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'ModeratMedium';
+    src: url('fonts/Moderat-Bold-Ital.woff2') format('woff2'), url('fonts/Moderat-Bold-Ital.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MLicons';
+    src: url('fonts/mlicons.woff?an386b') format('woff'),
+         url('fonts/mlicons.woff2?an386b') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i.icon-bigfoot {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'MLicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:before {
+    content: "\e900";
+  }
+}
+
+body {
+  background-color: $green;
+  color: white;
+  font-family: $Moderat;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $Archer;
+}
+
+h1 {
+  font-size: calc(2rem + 1.5vw);
+}
+
+h2 {
+  font-size: calc(1.7rem + .9vw);
+}
+
+header.navbar {
+  background-color: $white;
+  color: black;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+  margin-bottom: 1.5rem;
+  #site-id {
+    width: 30rem;
+    max-width: calc(100% - 5rem);
+  }
+}
+
+article {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    .spacer {
+      max-height: 100%;
+    }
+    &:nth-of-type(even) {
+      background-color: $white;
+      color: black;
+      box-shadow: 0 0px 15px 5px rgba(0,0,0,.15);
+    }
+  }
+  ul {
+    margin-left: 2rem;
+    max-width: calc(100% - 2rem)!important;
+    li::marker {
+      color: $pink;
+    }
+  }
+}
+
+#greenbar {
+  background-color: $green;
+  height: 2rem;
+  width: 100%;
+}
+
+footer {
+  background-color: $white;
+  color: black;
+  box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, .1);
+  margin-top: auto;
+  padding: 1rem;
+  span {
+    vertical-align: top;
+  }
+  div.navbar-light span.navbar-text a {
+    text-decoration: underline dotted;
+    color: rgba(0,0,0,0.5);
+    break-inside: avoid;
+  }
+  i {
+    font-size: 2rem;
+  }
+}
+
+#social {
+  width: 100%;
+  a {
+    display: inline;
+    font-size: 2.5rem;
+    padding: .1em;
+  }
+}
+
+#sidenav {
+  padding-top: 3rem;
+  margin-top: -3rem;
+  max-height: 50vh;
+  left: 80vw;
+  a {
+    background-color: $white;
+    padding: 0.7rem 1rem .3rem;
+    margin-bottom: 0.4rem;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .15);
+  }
+}
+
+//sm
+@media (min-width: 576px) {
+
+}
+
+//md
+@media (min-width: 768px) {
+  #social {
+    width: auto;
+    a {
+      margin: .4em;
+    }
+  }
+
+  article section {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    &:nth-of-type(even){
+      padding-left: 5%!important;
+    }
+    &:nth-of-type(odd){
+      padding-right: 1%!important;
+    }
+  }
+
+  #page {
+    margin-top: -243px;
+  }
+
+  footer {
+    h6 {
+      font-size: 1.2rem;
+    }
+    i {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+//lg
+@media (min-width: 992px) {
+  #page {
+    margin-top: -256px;
+  }
+}
+
+//xl
+@media (min-width: 1200px) {
+  article section {
+    &:nth-of-type(even){
+      padding-left: 4.6%!important;
+    }
+  }
+}
+
+//xxl
+@media (min-width: 1400px) {
+
+}
