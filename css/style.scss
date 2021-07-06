@@ -38,11 +38,16 @@ $Moderat: 'ModeratMedium', Helvetica, Arial, sans-serif;
 }
 
 @font-face {
-    font-family: 'MLicons';
-    src: url('fonts/mlicons.woff?an386b') format('woff'),
-         url('fonts/mlicons.woff2?an386b') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'MLIcons';
+src: url('fonts/MLIcons.eot?pfjsfd');
+src: url('fonts/MLIcons.eot?pfjsfd#iefix') format('embedded-opentype'),
+     url('fonts/MLIcons.ttf?pfjsfd') format('truetype'),
+     url('fonts/MLIcons.woff2?pfjsfd') format('woff2'),
+     url('fonts/MLIcons.woff?pfjsfd') format('woff'),
+     url('fonts/MLIcons.svg?pfjsfd#MLIcons') format('svg');
+font-weight: normal;
+font-style: normal;
+font-display: block;
 }
 
 i.icon-bigfoot {
