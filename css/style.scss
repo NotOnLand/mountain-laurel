@@ -97,6 +97,17 @@ header.navbar {
     width: 30rem;
     max-width: calc(100% - 5rem);
   }
+  #menu-main-menu {
+    margin-bottom: 1rem;
+    li .nav-link {
+      font-family: $Archer;
+      font-size: calc(1.3rem + .6vw);
+      margin-top: 0;
+      margin-bottom: .5rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  }
 }
 
 article {
@@ -133,7 +144,7 @@ footer {
   box-shadow: 0 -10px 10px 0 rgba(0, 0, 0, .1);
   margin-top: auto;
   padding: 1rem;
-  span {
+  span, ul {
     vertical-align: top;
   }
   div.navbar-light span.navbar-text a {
@@ -141,30 +152,66 @@ footer {
     color: rgba(0,0,0,0.5);
     break-inside: avoid;
   }
-  i {
-    font-size: 2rem;
+  #menu-footer-menu li .nav-link {
+    font-family: $Archer;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  #menu-footer-social-menu {
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    i {
+      display: inline;
+      font-size: 2rem;
+      padding: .1em;
+    }
   }
 }
 
 #social {
   width: 100%;
-  a {
-    display: inline;
-    font-size: 2.5rem;
-    padding: .1em;
+  margin-bottom: 1rem;
+  li .nav-link {
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    i {
+      display: inline;
+      font-size: 2.5rem;
+      padding: .1em;
+    }
   }
 }
 
 #sidenav {
+  list-style: none;
   padding-top: 3rem;
   margin-top: -3rem;
   max-height: 50vh;
   left: 80vw;
-  a {
+  li .nav-link {
+    font-family: $Archer;
+    font-size: calc(1.3rem + .6vw);
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 1.2;
+    color: rgba(0,0,0,.55);
     background-color: $white;
-    padding: 0.7rem 1rem .3rem;
+    padding: 0.6rem 1rem;
     margin-bottom: 0.4rem;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .15);
+    transition: .2s;
+    &:hover {
+      margin-left: -1rem;
+      margin-right: 1rem;
+    }
+  }
+  li.active .nav-link {
+    color: black;
   }
 }
 
@@ -177,7 +224,9 @@ footer {
 @media (min-width: 768px) {
   #social {
     width: auto;
-    a {
+    margin-bottom: 0;
+    li {
+      font-size: 2.5rem;
       margin: .4em;
     }
   }
@@ -193,15 +242,15 @@ footer {
     }
   }
 
-  #page {
-    margin-top: -243px;
+  #pageContent {
+    margin-top: -300px;
   }
 
   footer {
-    h6 {
+    #menu-footer-menu li a.nav-link {
       font-size: 1.2rem;
     }
-    i {
+    #menu-footer-social-menu i {
       font-size: 1.7rem;
     }
   }
@@ -209,8 +258,8 @@ footer {
 
 //lg
 @media (min-width: 992px) {
-  #page {
-    margin-top: -256px;
+  #pageContent {
+    margin-top: -310px;
   }
 }
 
