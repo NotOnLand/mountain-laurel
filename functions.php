@@ -55,4 +55,25 @@ register_nav_menus( [
   'footer-menu' => esc_html__( 'Footer Menu', 'mountainlaurel' ),
   'footer-social-menu' => esc_html__( 'Footer Social Menu', 'mountainlaurel' )
 ]);
+
+function hide_wp_update_nag() {
+    remove_action( 'admin_notices', 'update_nag', 3 ); //update notice at the top of the screen
+    remove_filter( 'update_footer', 'core_update_footer' ); //update notice in the footer
+}
+add_action('admin_menu','hide_wp_update_nag');
+
+//hide plugin updates notification in the dashboard
+function hide_plugin_update_indicator(){
+    global $menu,$submenu;
+    $menu[65][0] = 'Plugins';
+    $submenu['index.php'][10][0] = 'Updates';
+}
+add_action('admin_menu', 'hide_plugin_update_indicator');
+
+function hide_update_msg_non_admins(){
+     //if (!current_user_can( 'manage_options' )) { // non-admin users
+        echo '<style>#setting-error-tgmpa>.updated settings-error notice is-dismissible, .update-nag, .updated { display: none; }</style>';
+      //}
+    }
+    add_action( 'admin_head', 'hide_update_msg_non_admins');
 ?>

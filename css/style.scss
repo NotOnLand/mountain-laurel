@@ -130,6 +130,9 @@ article {
       color: $pink;
     }
   }
+  .modula-item .jtg-social svg, .lightbox-socials.jtg-social svg {
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.8));
+  }
 }
 
 #greenbar {
