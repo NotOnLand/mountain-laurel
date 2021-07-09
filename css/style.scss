@@ -239,9 +239,19 @@ footer {
     padding-bottom: 5rem;
     &:nth-of-type(even){
       padding-left: 5%!important;
+      div.col-12{
+        flex: 0 0 auto;
+        width: 75%;
+      }
     }
     &:nth-of-type(odd){
       padding-right: 1%!important;
+      flex: 0 0 auto;
+      width: 91.6666666667%;
+      div.col-12{
+        flex: 0 0 auto;
+        width: 83.3333333333%;
+      }
     }
   }
 
