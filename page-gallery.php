@@ -12,7 +12,7 @@
   <main id="pageContent" class="">
       <article class="container-fluid px-0">
 
-        <section class="col-12 col-md-11 row mx-auto px-2">
+        <section class="col-12 row mx-auto px-2">
           <div class="col-12 col-md-10 ">
             <h1>Gallery</h1>
             <?php

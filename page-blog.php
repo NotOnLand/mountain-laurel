@@ -20,9 +20,9 @@
 
               foreach ($blocks as $block) {
                 if(isset($block['blockName'])){
-                    echo '<section class="col-12 row mx-auto px-4"><div class="col-12">';
+                    //echo '<section class="col-12 row mx-auto px-2"><div class="col-12">';
                     echo render_block($block);
-                    echo '</div><div class="spacer d-none d-md-inline-block col-md-2"></div></section>';
+                    //echo '</div><div class="spacer d-none d-md-inline-block col-md-2"></div></section>';
                   }
                 }
               ?>
